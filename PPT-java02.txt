@@ -1,0 +1,68 @@
+Assignment-2
+
+1. In Java, conditional operators, also known as ternary operators, are operators that allow you to evaluate a condition 
+   and choose one of two possible values based on the result of the condition. The conditional operator in Java is represented by the question mark (?) 
+   and the colon (:) symbols.
+
+2. Unary Operator
+   Binary Operator
+   Ternary Operator
+   Arithmetic Compound Assignment Operators.
+
+3. The switch statement in Java is a control flow statement that allows you to select one of many possible code blocks to execute based on the value of an expression.
+   It provides a concise and efficient way to handle multiple branches of execution.
+
+4 .In Java, conditional statements are used to control the flow of execution based on certain conditions. The main conditional statements in Java are:
+     * if
+     * else if-else
+     * if-else if-else
+
+5. Syntax of if-else
+   if (condition) {
+    // code to execute if the condition is true
+   } else {
+    // code to execute if the condition is false
+   }
+
+6. In Java, comparison of two strings done by using the equals() method or the compareTo() method and == opeartor. 
+
+7. In Java, strings are immutable, which means their values cannot be changed once they are created. 
+   However, the StringBuilder and StringBuffer classes in Java provide mutable string objects.
+   These classes allow you to modify the contents of the string without creating a new object each time.
+
+8. public class StringSortExample {
+    public static void main(String[] args) {
+        String str = "programming";
+        
+        char[] chars = str.toCharArray();
+     
+        for (int i = 0; i < chars.length - 1; i++) {
+            for (int j = 0; j < chars.length - i - 1; j++) {
+                if (chars[j] > chars[j + 1]) {
+                    // Swap characters
+                    char temp = chars[j];
+                    chars[j] = chars[j + 1];
+                    chars[j + 1] = temp;
+                }
+            }
+        }
+        String sortedStr = new String(chars);
+        System.out.println("Sorted String: " + sortedStr);
+    }
+}
+
+9. public static void main(String[] args) {
+        String word = "Ineuron";
+        
+        if (word.contains("e")) {
+            System.out.println("The letter 'e' is present in the word.");
+        } else {
+            System.out.println("The letter 'e' is not present in the word.");
+        }
+    }
+
+10.In Java, the string constant pool is a part of the runtime constant pool, which is a special area in the Java Virtual Machine (JVM) memory.
+   It is a pool of unique string literals that are used throughout the application.
+   The string constant pool is typically located in the method area of the JVM's memory. 
+
+

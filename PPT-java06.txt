@@ -1,0 +1,81 @@
+PPT Assignment-6
+
+1. In Java, the Collection is an interface that represents a group of objects known as elements. 
+   It provides various methods and operations to manipulate and organize collections of objects. 
+   The Collection interface is part of the Java Collections Framework, which provides a unified architecture for manipulating and storing groups of objects.
+
+2.  Difference between Collection and collections in the context of Java.
+    In Java, the term "Collection" (with a capital 'C') refers to the Collection interface and the interfaces that extend it, such as List, Set, and Queue. 
+    It represents a group of objects.
+
+    collecions generally refers to the concept of collections in Java, including interfaces, classes, and utility methods provided by the Java Collections Framework.
+    It encompasses the entire framework and includes the Collection interface and its implementations.
+
+3. the advantages of the Collection framework
+     1)Standardization
+     2) Efficiency
+     3) Underlying data structure
+     4)Utility methods
+
+4. Interfaces in collection
+     1)Collection: The root interface of the framework, representing a group of objects. It provides basic methods for adding, removing, and querying elements.
+
+     2) List: An ordered collection that allows duplicate elements. It provides methods for positional access and manipulation of elements.
+
+     3) Set: A collection that does not allow duplicate elements. It provides methods for adding and querying elements based on their equality.
+
+     4) Queue: A collection designed for holding elements prior to processing. It typically follows the FIFO (First-In-First-Out) order and provides additional methods for insertion, removal, and retrieval operations.
+
+     5) Map: An object that maps keys to values. It associates unique keys with corresponding values and provides methods for adding, removing, and querying elements based on their keys.
+
+5. List:
+      Allows duplicate elements.
+      Maintains an ordered collection (elements can be accessed by their index).
+      Provides positional access and manipulation of elements.
+      Implementations include ArrayList, LinkedList, and Vector.
+   Set:
+      Does not allow duplicate elements.
+      Does not maintain any specific order (elements are unordered).
+      Provides methods for adding and querying elements based on their equality.
+      Implementations include HashSet, TreeSet, and LinkedHashSet. 
+
+6. Iterator:
+      Allows iterating over a collection in a forward direction.
+      Provides basic methods like hasNext() to check if there are more elements, and next() to retrieve the next element.
+      Supports removal of elements during iteration using the remove() method.
+      Implemented by various collection classes in Java.
+   ListIterator:
+      Extends the Iterator interface and provides additional methods for bidirectional iteration (forward and backward).
+      Supports modification of elements during iteration using methods like add(), set(), and remove().
+      Implemented specifically by list-based collection classes like ArrayList and LinkedList.
+
+7. Comparable:
+      Implemented by a class to provide its natural ordering.
+      The compareTo() method is implemented to define the default ordering of objects.
+      The natural ordering is used by default when sorting a collection of objects.
+      Can only be implemented by the class itself.
+   Comparator:
+      A separate class that implements the Comparator interface to define custom ordering for objects.
+      The compare() method is implemented to define the custom ordering logic.
+      Comparator can be used to compare objects of different classes or to provide alternative ordering for a class that already implements Comparable.
+      Can be implemented separately from the class being compared.
+
+8. A collision occurs when two or more keys produce the same hash code.
+   Since a HashMap uses hash codes to distribute keys across buckets, collisions can happen when different keys end up with the same hash code. When a collision occurs, the HashMap uses a linked list or a balanced tree (depending on the JDK version and the number of colliding elements) to store multiple entries in the same bucket.
+
+9. HashMap:
+     Does not maintain any specific order of its elements.
+     Uses hashing to store and retrieve key-value pairs.
+     Offers constant-time performance for basic operations like put(), get(), and remove() (on average).
+     Allows null keys and values.
+     Suitable for general-purpose use when order is not a concern and fast access is important.
+   TreeMap:
+     Maintains the natural ordering of its elements based on the keys.
+     Uses a red-black tree data structure to store and retrieve key-value pairs.
+     Offers log(n) time complexity for basic operations like put(), get(), and remove().
+     Does not allow null keys but allows null values.
+     Suitable when elements need to be sorted according to their natural ordering or a custom comparator.
+
+10. LinkedHashMap in Java
+     Linked hashMap is the child class of hashMap .It follows insertion order of theelements. It uses data structure of hashing algorithm to store the data.
+     It also follows doubly linked list to maintain the insertion order.

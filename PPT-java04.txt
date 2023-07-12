@@ -1,0 +1,95 @@
+PPT ASSIGNMENT-4
+
+1. interface Shape {
+    void draw();
+   }
+
+   class Circle implements Shape {
+    public void draw() {
+        System.out.println("Drawing a circle");
+    }
+   }
+
+   public class TestApp {
+    public static void main(String[] args) {
+        Shape circle = new Circle();
+        circle.draw();
+     }
+   }
+
+2. abstract class Shape {
+    abstract void draw();
+
+    void display() {
+        System.out.println("Displaying the shape");
+    }
+   }
+
+   class Circle extends Shape {
+    void draw() {
+        System.out.println("Drawing a circle");
+    }
+   }
+
+public class TestApp{
+    public static void main(String[] args) {
+        Shape circle = new Circle();
+
+        circle.draw();      // Output: Drawing a circle
+        circle.display();   // Output: Displaying the shape
+    }
+}
+
+3. @FunctionalInterface
+   interface Calculator {
+      int calculate(int num1, int num2);
+   }
+
+   public class MainApp {
+     public static void main(String[] args) {
+        Calculator addition = (a, b) -> a + b;
+        Calculator subtraction = (a, b) -> a - b;
+
+        int result1 = addition.calculate(5, 3);
+        int result2 = subtraction.calculate(10, 7);
+        System.out.println("Result 1: " + result1); 
+        System.out.println("Result 2: " + result2); 
+    }
+}
+
+4. Interface
+
+     In Java, an interface is a reference type that acts as a contract for classes implementing it. 
+     It defines a collection of abstract methods and constants that any implementing class must provide. 
+     An interface can be considered as a blueprint for classes, specifying what methods they should have without providing the implementation details.
+
+     In addition to abstract methods, interfaces can also include default methods (methods with a default implementation) and static methods. 
+     They can't be instantiated directly but can be implemented by classes using the implements keyword. 
+     A class can implement multiple interfaces, allowing it to inherit behaviors from multiple sources.
+
+5. The use of an interface in Java?
+     1) Achieving abstraction
+     2) Software requirement specification
+     3) Contractor between clients and services.
+     4) Api design
+
+6. The lambda expression of Java 8
+     Lambda expressions enable the use of functional interfaces, which are interfaces with a single abstract method (SAM). 
+     They allow you to write more readable and compact code, especially when working with functional programming concepts like streams, filters, and mapping operations.
+
+7.  Yes, you can pass lambda expressions as arguments to methods in Java. 
+    This is possible when the method parameter type is a functional interface, i.e., an interface with a single abstract method.
+
+8. Functional interface in Java 8
+      A functional interface in Java 8 is an interface that contains a single abstract method (SAM). It serves as the foundation for lambda expressions and method references.
+      Functional interfaces are also known as SAM types (Single Abstract Method types) or functional types.
+
+9. The benefit of lambda expressions in Java 8
+      Readability and Conciseness
+      Code reusability and flexibility
+      Functional programming
+
+10. No, it is not mandatory for a lambda expression to have parameters. Lambda expressions can be parameterless if the target functional interface does not require any input arguments. 
+
+
+

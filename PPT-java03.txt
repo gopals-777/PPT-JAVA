@@ -1,0 +1,157 @@
+ASSIGNMENT-3
+
+1. Banking System Program:
+   class BankAccount {
+    private String accountHolderName;
+    private double balance;
+
+    public BankAccount(String accountHolderName, double balance) {
+        this.accountHolderName = accountHolderName;
+        this.balance = balance;
+    }
+
+    public String getAccountHolderName() {
+        return accountHolderName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    public void withdraw(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient balance");
+        }
+    }
+   }
+
+   public class BankingSystem {
+    public static void main(String[] args) {
+        BankAccount account = new BankAccount("John Doe", 1000.0);
+        
+        System.out.println("Account Holder Name: " + account.getAccountHolderName());
+        System.out.println("Balance: " + account.getBalance());
+        
+        account.deposit(500.0);
+        System.out.println("Balance after deposit: " + account.getBalance());
+        
+        account.withdraw(200.0);
+        System.out.println("Balance after withdrawal: " + account.getBalance());
+    }
+   }
+
+2. Overriding concept
+    class Animal {
+    	public void makeSound() {
+       		System.out.println("The animal makes a sound");
+    	}
+    }
+
+    class Dog extends Animal {
+        @Override
+        public void makeSound() {
+           System.out.println("The dog barks");
+        } 
+    }
+
+    public class TestApp {
+        public static void main(String[] args) {
+             Animal animal = new Animal();
+             animal.makeSound();
+
+             Dog dog = new Dog();
+             dog.makeSound();
+        }
+    }
+
+3. class Animal {
+    public void sound() {
+        System.out.println("Animal is making a sound");
+    }
+   }
+
+   class Cat extends Animal {
+    public void sound() {
+        System.out.println("Cat is meowing");
+    }
+   }
+
+   public class TestApp {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+
+        animal.sound(); // Output: Animal is making a sound
+        dog.sound();    // Output: Dog is barking
+        cat.sound();    // Output: Cat is meowing
+    }
+   }
+
+4. class Calculator {
+    public int add(int num1, int num2) {
+        return num1 + num2;
+    }
+    
+    public double add(double num1, double num2) {
+        return num1 + num2;
+    }
+   }
+
+   public class TestApp {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        int result1 = calculator.add(5, 10);
+        double result2 = calculator.add(2.5, 3.7);
+
+        System.out.println("Result 1: " + result1); // Output: Result 1: 15
+        System.out.println("Result 2: " + result2); // Output: Result 2: 6.2
+    }
+   }
+5. The ways to achieve a loose coupling
+    * Dependency Injection 
+    * Design patterns
+    * Interface based programming
+  
+
+6. Benefit of encapsulation in java:
+   1)Code Reusability
+   2)Data Hiding
+   3)Access Control
+
+7. Java is often considered an object-oriented programming (OOP) language, but it is not strictly a 100% object-oriented programming language. 
+   Java includes both object-oriented and procedural programming features. 
+   Java supports primitive data types such as int, char, boolean, etc., which are not objects.
+
+8. The advantages of abstraction in Java
+    1)Code reusability
+    2)Extension
+    3)Loose coupling
+    4)Hiding details
+
+9. 
+    abstract class Animal {
+       public abstract void makeSound();
+
+       public void sleep() {
+           System.out.println("The animal is sleeping");
+       }
+    }
+
+    class Dog extends Animal {
+        @Override
+        public void makeSound() {
+           System.out.println("The dog barks");
+        }
+    }
+
+10. In Java, the final keyword can be used to modify a class, method, or variable. When applied to a class, the final keyword indicates that the class cannot be subclassed or extended.
+    A variable declared as final to give the value as constant value and cannot able to change the value.
+    If it is suits to method then can't override method in subclass or child class.

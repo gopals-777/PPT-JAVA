@@ -1,0 +1,71 @@
+Assignment -1
+
+1. A compiler is a program that translates the entire source code into machine code before execution.
+   It takes the complete source code as input, analyzes it, and produces an executable file or binary.
+
+   An interpreter, on the other hand, directly executes the source code line by line without prior 
+   conversion into machine code.It takes the source code as input and translates and executes it line
+   by line or statement by statement.
+
+2. JDK (Java Development Kit):
+
+      The JDK is a software development kit provided by Oracle (and other vendors) that includes everything needed to develop Java applications.
+      It includes the Java compiler (javac) to compile Java source code into bytecode.
+      The JDK also provides a wide range of development tools, libraries, and documentation required for Java application development.
+   
+   JRE (Java Runtime Environment):
+
+      The JRE is a subset of the JDK and it is the place where Java applications were running.
+      It includes the Java Virtual Machine (JVM) and the core class libraries necessary for executing Java programs.
+
+   JVM (Java Virtual Machine):
+      The JVM is the runtime environment in which Java bytecode is executed.
+      It is responsible for interpreting or Just-In-Time (JIT) compiling the bytecode into machine code that can be executed by the underlying operating system.
+      The JVM provides a platform-independent abstraction layer, allowing Java programs to run on different hardware and operating systems without modification.
+
+3. Memory areas allocated by jvm
+      Heap area,stack area,method area,native area and PC register.
+
+4. JIT stands for "Just-In-Time." 
+      In JIT compilation, the compilation process occurs at runtime, just before the code is executed. 
+      The source code is initially interpreted and, as it is being executed, the JIT compiler dynamically compiles specific parts of the code into machine code.
+
+5. The various access specifiers in Java are
+      public,private,protected,default.
+
+6. In Java, a compiler is a software tool that translates Java source code written by developers into a format that can be understood and executed by the Java Virtual Machine (JVM).
+
+7. Types of variables:
+     1)static variable
+     2)Final Variabe
+     3)Local variable
+     4)Instance variable
+     5)Parameter variable
+
+8. Datatypes in Java are
+     byte,short,int,long ,float,double,char,boolean .
+
+9. Identifiers:
+     Identifiers in java is used to identify thename of the variable,method or class.
+
+10.  The architecture of JVM 
+       Class Loader:
+            The Class Loader is responsible for loading classes and interfaces into the JVM at runtime.
+            It locates and loads the bytecode of classes from various sources, such as the local file system, network, or other class loaders.
+       Class File Format:
+            The Class File Format specifies the structure and organization of compiled Java classes in bytecode.
+            Each class file contains the information needed by the JVM, such as the constant pool, field and method information, and bytecode instructions.
+       Runtime Data Areas:
+            The JVM's Runtime Data Areas are regions of memory used during program execution.
+            The main runtime data areas include the Method Area, Heap, Java Stack, PC Registers, and Native Method Stack.
+            These areas store information such as loaded class bytecode, object instances, method frames, and other data needed for program execution.
+       Execution Engine:
+            The Execution Engine is responsible for executing Java bytecode.
+            It interprets the bytecode instructions and executes them sequentially.
+            Some JVM implementations also use Just-In-Time (JIT) compilation techniques, where frequently executed bytecode is dynamically compiled into native machine code for improved performance.
+       Garbage Collector:
+            The Garbage Collector (GC) is responsible for automatic memory management in the JVM.
+            It identifies and reclaims memory that is no longer in use by the program.
+            The GC tracks object references, detects unreachable objects, and frees memory occupied by those objects.
+       Native Method Interface (JNI): 
+            The Native Method Interface allows Java code to interact with native code written in languages like C or C++.Class Loader:
